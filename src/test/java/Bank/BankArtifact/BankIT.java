@@ -34,8 +34,9 @@ public class BankIT {
 		Client c1 = new Client("Mauro");
 		
 		bank.addClient(c1);
-		bank.depositAccount(c1, 20f);
 		bank.getClientByName(c1.getName());
+		bank.depositAccount(c1, 20f);
+	
 			
 	}
 	
@@ -46,9 +47,9 @@ public class BankIT {
 		Client c1 = new Client("Mauro");
 		
 		bank.addClient(c1);
-		
-		bank.depositAccount(c1, 20f);
 		bank.getClientByName(c1.getName());
+		bank.depositAccount(c1, 20f);
+		
 		bank.withdrawClientAccount(c1, 10f);
 		
 	}
@@ -56,7 +57,17 @@ public class BankIT {
 	@Test
 	public void testTransactionBetweenUsers() {
 		// use the functions transfer(Client,Client,float) & getClientByName(String) from Bank
-		assertTrue(false);
+		
+		bank = new Bank();
+		Client c1 = new Client("Mauro");
+		Client c2 = new Client("Costa");
+		
+		bank.addClient(c1); bank.addClient(c2);
+		bank.getClientByName(c1.getName()); bank.getClientByName(c2.getName());
+		
+		bank.depositAccount(c1, 50f);
+		bank.transfer(c1, c2, 5f);
+		
 	}
 
 }
