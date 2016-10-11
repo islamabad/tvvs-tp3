@@ -37,7 +37,6 @@ public class BankIT {
 		bank.depositAccount(c1, 20f);
 		bank.getClientByName(c1.getName());
 			
-		assertTrue(false);
 	}
 	
 	@Test	
