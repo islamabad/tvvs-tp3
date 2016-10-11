@@ -28,7 +28,15 @@ public class BankIT {
 
 	@Test
 	public void testDepositAmount() {
-		// use the functions depositAccount(Client,float) & getClientByName(String) from Bank 
+		// use the functions depositAccount(Client,float) & getClientByName(String) from Bank
+		
+		bank = new Bank();
+		Client c1 = new Client("Mauro");
+		
+		bank.addClient(c1);
+		bank.depositAccount(c1, 20f);
+		bank.getClientByName(c1.getName());
+			
 		assertTrue(false);
 	}
 	
