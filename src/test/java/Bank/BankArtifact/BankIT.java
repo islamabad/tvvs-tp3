@@ -42,7 +42,15 @@ public class BankIT {
 	@Test	
 	public void testWithdrawAmount() {	
 		// use the functions depositAccount(Client), getClientByName(String) & withdrawClientAccount(Client) from Bank
-		assertTrue(false);
+		bank = new Bank();
+		Client c1 = new Client("Mauro");
+		
+		bank.addClient(c1);
+		
+		bank.depositAccount(c1, 20f);
+		bank.getClientByName(c1.getName());
+		bank.withdrawClientAccount(c1, 10f);
+		
 	}
 	
 	@Test
